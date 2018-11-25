@@ -13,17 +13,12 @@ module.exports = function(app){
             friendDifference: 1000
         }
 
-        console.log(req.body);
-
         var userData = req.body;
         var userScores = userData.scores;
-
-        console.log(userScores);
 
         var totalDifference = 0;
 
         for (var x = 0; x < friends.length; x++){
-            console.log(friends[x]);
             totalDifference = 0;
 
             for (var i = 0; i < friends[x].scores[i]; i++){
