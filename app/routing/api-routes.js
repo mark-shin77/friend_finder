@@ -19,5 +19,26 @@ module.exports = function(app){
         var userScores = userData.scores;
 
         console.log(userScores);
+
+        var totalDifference = 0;
+
+        for (var x = 0; x < friends.length; x++){
+            console.log(friends[x]);
+            totalDifference = 0;
+
+            for (var i = 0; i < friends[x].scores[i]; i++){
+                totalDifference += Math.abs(parseInt(userScores[i]) - parseInt(friends[x].scores[i]))
+
+                if(totalDifference <= bestMatch.friendDifference){
+                    bestMatch.name = friends[i].name;
+                    bestMatch.photo = friends[i].photo;
+                    bestMatch.friendDifference = totalDifference;
+                }
+            }
+        }
+
+        friends.push(userData);
+
+        res.json(bestMatch);
     })
 }
