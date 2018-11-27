@@ -13,65 +13,49 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    
         <!-- My CSS -->
-        <link rel="stylesheet" type="text/css" href="/app/public/style.css">
+        <link rel="stylesheet" type="text/css" href="../public/style.css">
 
         <title>Friend Finder</title>
     </head>
     <body>
-        <br><br><br>
-        <div class="container text-center" id="user-info">
-            <h2><strong>Survey</strong></h2>
-                <p>Take a quick survey to find your perfect match! These questions are answered by</p>
-                <p>the numbers 1 through 5. If you really, really disagree with the statement, your</p>
-                <p>answer would be 1. If you find a statement to hit extremely close to home, put in a 5.</p>
-            <br>
-            <h4>About You</h4>
-            <br>
-            <div class="row">
-                <div class="col-lg-2 white-space">:before</div>
-                <div class="col-lg-8">
-                    <input type="text" id="name" class="form-control" required placeholder="Name (Required)">
+        <div class="container-fluid content-wrapper">
+            <div class="row white-space" style="font-size: 40px">:above</div>
+            <div class="container text-center" id="user-info">
+                <h1><strong>Survey</strong></h1>
+                    <p>Take a quick survey to find your perfect match! These questions are answered by</p>
+                    <p>the numbers 1 through 5. If you really, really disagree with the statement, your</p>
+                    <p>answer would be 1. If you find a statement to hit extremely close to home, put in a 5.</p>
+                <br>
+                <h4>About You</h4>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-8">
+                        <input type="text" id="name" class="form-control" required placeholder="Name (Required)">
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
                 </div>
-                <div class="col-lg-2 white-space">:after</div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-8">
+                        <input type="text" id="photo" class="form-control" required placeholder="Link to Profile Photo (Required)">
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-2 white-space">:before</div>
-                <div class="col-lg-8">
-                    <input type="text" id="photo" class="form-control" required placeholder="Link to Profile Photo (Required)">
-                </div>
-                <div class="col-lg-2 white-space">:after</div>
-            </div>
-        </div>
-        <br><br>
-            <div class="container text-center" id="user-questions">
-            <h4>Questions</h4>
-            <div class="row">
-                <div class="col-lg-2 white-space">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>1. My goals in life are clear</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q1">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="col-lg-2 white-space">:after</div>
-            </div>
+    
             <br><br>
-
-            <div class="row">
+    
+            <div class="container text-center" id="user-questions">
+                <h4>Questions</h4>
+                <div class="row">
                     <div class="col-lg-2 white-space">:before</div>
                     <div class="col-lg-6 text-left">
-                        <h6>2. If people are rude to me I just shrug it off</h6>
+                        <h6>1. My goals in life are clear</h6>
                     </div>
                     <div class="col-lg-2">
-                        <select data-placeholder="" class="chosen-select" id="q2">
+                        <select data-placeholder="" class="chosen-select" id="q1">
                             <option value=""></option>
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2 (Disagree)</option>
@@ -82,262 +66,282 @@
                     </div>
                     <div class="col-lg-2 white-space">:after</div>
                 </div>
-            <br><br>
-            
-            <div class="row">
-                <div class="col-lg-2 white-space">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>3. I am confident in what I do</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q3">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 (Disagree)</option>
-                    <option value="3">3 (Neutral)</option>
-                    <option value="4">4 (Agree)</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-                </div>
-                <div class="col-lg-2 white-space">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2 white-space">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>4. I can work even when things are disorganised</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q4">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
+                <br><br>
+    
+                <div class="row">
+                        <div class="col-lg-2 white-space">:before</div>
+                        <div class="col-lg-6 text-left">
+                            <h6>2. If people are rude to me I just shrug it off</h6>
+                        </div>
+                        <div class="col-lg-2">
+                            <select data-placeholder="" class="chosen-select" id="q2">
+                                <option value=""></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2 (Disagree)</option>
+                                <option value="3">3 (Neutral)</option>
+                                <option value="4">4 (Agree)</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 white-space">:after</div>
+                    </div>
+                <br><br>
+                
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>3. I am confident in what I do</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q3">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2 (Disagree)</option>
                         <option value="3">3 (Neutral)</option>
                         <option value="4">4 (Agree)</option>
                         <option value="5">5 (Strongly Agree)</option>
                     </select>
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
                 </div>
-                <div class="col-lg-2 white-space">:after</div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>4. I can work even when things are disorganised</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q4">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>5. I consistently put full time and effort into everything I do</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q5">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>6. I prefer achieving my goals than assisting others to achieve their goals</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q6">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>7. I would describe myself as an extremely competent person</h6>    
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q7">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>8. I prefer working within a stable rather than flexible environment</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q8">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>9. I am ambitious</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q9">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>10. It's better to get a job done than aim for perfection</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q10">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>11. I am able to complete tasks as well as, or better than other people</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q11">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>12. I like to be in charge of other people</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q12">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>13. I strive to do the best I can</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q13">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                    
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>14. I feel uneasy if I'm the center of attention</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q14">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                    
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <div class="row">
+                    <div class="col-lg-2 white-space">:before</div>
+                    <div class="col-lg-6 text-left">
+                        <h6>15. I am confident in my abilities to complete difficult tasks at work</h6>
+                    </div>
+                    <div class="col-lg-2">
+                        <select data-placeholder="" class="chosen-select" id="q15">
+                            <option value=""></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2 (Disagree)</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4 (Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>                        
+                    </div>
+                    <div class="col-lg-2 white-space">:after</div>
+                </div>
+                <br><br>
+    
+                <button type="submit" class="btn btn-light" id="submit">Submit</button>
+                <br><br>
             </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2 white-space">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>5. I consistently put full time and effort into everything I do</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q5">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="col-lg-2 white-space">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>6. I prefer achieving my goals than assisting others to achieve their goals</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q6">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>7. I would describe myself as an extremely competent person</h6>    
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q7">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>8. I prefer working within a stable rather than flexible environment</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q8">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>9. I am ambitious</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q9">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>10. It's better to get a job done than aim for perfection</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q10">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>11. I am able to complete tasks as well as, or better than other people</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q11">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>12. I like to be in charge of other people</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q12">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>13. I strive to do the best I can</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q13">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                    
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>14. I feel uneasy if I'm the center of attention</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q14">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                    
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <div class="row">
-                <div class="col-lg-2">:before</div>
-                <div class="col-lg-6 text-left">
-                    <h6>15. I am confident in my abilities to complete difficult tasks at work</h6>
-                </div>
-                <div class="col-lg-2">
-                    <select data-placeholder="" class="chosen-select" id="q15">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2 (Disagree)</option>
-                        <option value="3">3 (Neutral)</option>
-                        <option value="4">4 (Agree)</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>                        
-                </div>
-                <div class="col-lg-2">:after</div>
-            </div>
-            <br><br>
-
-            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-            <br><br><br>
         </div>
 
         <footer class="footer">
             <div class="container text-right">
-                <p><a href="#">API Friends List</a> | <a href="#">Github Repo</a></p>
+                <p style="font-size: 20px"><a href="/api/friends">API Friends List</a>  |  <a href="https://github.com/mark-shin77/friend_finder">Github Repo</a></p>
             </div>
         </footer>
 

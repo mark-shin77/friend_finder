@@ -14,28 +14,45 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    
         <!-- My JS -->
         <script src="frontend.js"></script>
+        <!-- My CSS -->
+        <link rel="stylesheet" type="text/css" href="../public/style.css">
+
 
         <title>Friend Finder</title>
     </head>
     <body>
-        <div class="container text-center">
-            <div class="jumbotron">
-                <h1 class=""><i class="fab fa-facebook-square"></i> Friend Finder</h1>
-                <hr>
-                <h2 class="">Answer a few basic questions.</h2>
-                <h2 class="">Then find a friend with the greatest compatibility.</h2>
+        <div class="container">
+            <div class="jumbotron big-bang-theory">
+                <div class="row">
+                    <div class="col-lg-5 text-center title">
+                        <h2>Find Your Big Bang Theory Match!</h2>
+                    </div>
+                    <div class="col-lg-7 white-space">:after</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 text-center basic-info">
+                        <h5>Answer a few basic questions.</h5>
+                        <h5>Then find a new friend with the greatest compatibility.</h5>
+                    </div>
+                    <div class="col-lg-7 white-space">:after</div>
+                </div>
                 <br>
-                <div class="">
-                    <a href="survey"><button type="button" class="btn btn-lg btn-primary">
-                        <h4><span class="glyphicon glyphicon-list-alt"></span>Go To Survey</h4></button>
-                    </a>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="text-center">
+                            <a href="survey"><button type="button" class="btn btn-lg btn-light">
+                                <h4><span class="glyphicon glyphicon-list-alt"></span>Go To Survey</h4></button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 white-space">:after</div>
                 </div>
             </div>
         </div>
         
         <footer class="footer">
-            <div class="container">
-                <p><a href="#">API Friends List</a> | <a href="#">Github Repo</a></p>
+            <div class="container text-right">
+                <p style="font-size: 20px"><a href="/api/friends">API Friends List</a> | <a href="https://github.com/mark-shin77/friend_finder">Github Repo</a></p>
             </div>
         </footer>
     </body>

@@ -2,6 +2,29 @@
     visibility: hidden;
 }
 
-body{
-    background: blue;
+.content-wrapper{
+    background: rgb(130, 207, 255);
+}
+
+.big-bang-theory{
+    margin-top: 3%;
+    background: url(https://wwwimage-secure.cbsstatic.com/thumbnails/photos/w1920/marquee/1025011/666a5d6d38291e93_bbt_sp_hero_landscape.jpg);
+    background-repeat: round;
+    height: 600px;
+}
+
+.title{
+    margin-top: 6%;
+    margin-bottom: 1%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.basic-info{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer{
+    padding: 30px;
 }
