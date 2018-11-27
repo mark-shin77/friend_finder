@@ -14,22 +14,24 @@ module.exports = function(app){
         }
 
         var userData = req.body;
+        // console.log(userData);
         var userScores = userData.scores;
-
-        var totalDifference = 0;
+        // console.log(userScores)
 
         for (var x = 0; x < friends.length; x++){
-            totalDifference = 0;
+            var totalDifference = 0;
 
             for (var i = 0; i < friends[x].scores[i]; i++){
                 totalDifference += Math.abs(parseInt(userScores[i]) - parseInt(friends[x].scores[i]))
 
-                if(totalDifference <= bestMatch.friendDifference){
+                if(totalDifference = bestMatch.friendDifference){
                     bestMatch.name = friends[i].name;
                     bestMatch.photo = friends[i].photo;
                     bestMatch.friendDifference = totalDifference;
                 }
+
             }
+            console.log(totalDifference);
         }
 
         friends.push(userData);
