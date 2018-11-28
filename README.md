@@ -18,6 +18,8 @@ Friend Finder implements friend matching based on the user's responses to a fift
   
 ## Screen Shots
 Home Page
-![Screen shot 1](app/public/images/SS1.PNG)  
+![Screen shot 1](app/public/images/SS1.PNG)
+
 Survey Page
+
 ![Screen shot 2](app/public/images/SS2.PNG)
