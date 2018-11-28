@@ -16,54 +16,10 @@
         <title>Friend Finder</title>
     </head>
     <body>
-        <style>
-            .white-space{
-                visibility: hidden;
-            }
-
-            footer{
-                padding: 30px;
-            }
-            /* Survey Page Styling */
-            .content-wrapper{
-                background: rgba(130, 207, 255, 0.555);
-                /* background-image: linear-gradient(to top, lightskyblue, white); */
-            }
-            #survey{
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-            }
-            select {
-                -webkit-appearance: menulist;
-                -moz-appearance: menulist;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -webkit-padding-end: 0px;
-                -moz-padding-end: 0px;
-                -webkit-padding-start: 0px;
-                -moz-padding-start: 0px;
-                background-color: rgb(255, 255, 255); /* fallback color if gradients are not supported */
-                background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
-                background-image: url(../images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Fx (3.6 to 15) */
-                background-image: url(../images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of IE 10*/
-                background-image: url(../images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */ 
-                background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
-                background-position: center right;
-                background-repeat: no-repeat;
-                border: 1px solid #AAA;
-                border-radius: 2px;
-                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-                color: rgb(112, 112, 112);
-                font-size: inherit;
-                margin: 0;
-                overflow: hidden;
-                padding-top: 1px;
-                padding-bottom: 1px;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-        </style>
+        <!-- Page Content -->
         <div class="container-fluid content-wrapper">
             <div class="row white-space" style="font-size: 40px">:above</div>
+            <!-- User Information -->
             <div class="container text-center" id="user-info">
                 <h1 id="survey"><strong>Survey</strong></h1>
                     <p>Take a quick survey to find your perfect Big Bang Theory Partner! These questions are answered by</p>
@@ -90,6 +46,7 @@
     
             <br>
     
+            <!-- Survery Questions -->
             <div class="container text-center" id="user-questions">
                 <h4 id="survey">Questions</h4>
                 <div class="row">
@@ -409,66 +366,115 @@
         </div>
     </div>
 
-        <script>
+    <!-- css -->
+    <style>
+        .white-space{
+            visibility: hidden;
+        }
 
-            $('#submit').on('click', function(){
-                function validateForm (){
-                    var isValid = true;
-                    $(".form-control").each(function(){
-                        if($(this).val() === ""){
-                            isValid = false;
-                        }
-                    })
+        footer{
+            padding: 30px;
+        }
+        /* Survey Page Styling */
+        .content-wrapper{
+            background: rgba(130, 207, 255, 0.555);
+            /* background-image: linear-gradient(to top, lightskyblue, white); */
+        }
+        #survey{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        select {
+            -webkit-appearance: menulist;
+            -moz-appearance: menulist;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -webkit-padding-end: 0px;
+            -moz-padding-end: 0px;
+            -webkit-padding-start: 0px;
+            -moz-padding-start: 0px;
+            background-color: rgb(255, 255, 255); /* fallback color if gradients are not supported */
+            background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+            background-image: url(../images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Fx (3.6 to 15) */
+            background-image: url(../images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of IE 10*/
+            background-image: url(../images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */ 
+            background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
+            background-position: center right;
+            background-repeat: no-repeat;
+            border: 1px solid #AAA;
+            border-radius: 2px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            color: rgb(112, 112, 112);
+            font-size: inherit;
+            margin: 0;
+            overflow: hidden;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
 
-                    $(".chosen-select").each(function(){
-                        if($(this).val() === ""){
-                            isValid = false;
-                        }
-                    })
-                    return isValid;
-                }
-
-                if(validateForm()){
-                    var userData = {
-                        name: $("#name").val(),
-                        photo: $("#photo").val(),
-                        scores: [
-                            $("#q1").val(),
-                            $("#q2").val(),
-                            $("#q3").val(),
-                            $("#q4").val(),
-                            $("#q5").val(),
-                            $("#q6").val(),
-                            $("#q7").val(),
-                            $("#q8").val(),
-                            $("#q9").val(),
-                            $("#q10").val(),
-                            $("#q11").val(),
-                            $("#q12").val(),
-                            $("#q13").val(),
-                            $("#q14").val(),
-                            $("#q15").val(),
-                        ]
+    <!-- Javascript -->
+    <script>
+        $('#submit').on('click', function(){
+            function validateForm (){
+                var isValid = true;
+                $(".form-control").each(function(){
+                    if($(this).val() === ""){
+                        isValid = false;
                     }
-                    var currentURL = window.location.origin;
-                    $.post(currentURL +  "/api/friends", userData, function(data){
-                        $("#matchName").text(data.name);
-                        $("#matchImg").attr("src", data.photo);
-                        $("#results").modal("toggle");
-    
-                        console.log(data.image);
-                    });
+                })
+
+                $(".chosen-select").each(function(){
+                    if($(this).val() === ""){
+                        isValid = false;
+                    }
+                })
+                return isValid;
+            }
+
+            if(validateForm()){
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val(),
+                        $("#q11").val(),
+                        $("#q12").val(),
+                        $("#q13").val(),
+                        $("#q14").val(),
+                        $("#q15").val(),
+                    ]
                 }
-                else{
-                    alert("Please fill out the entire form to find a match!")
-                }
+                var currentURL = window.location.origin;
+                $.post(currentURL +  "/api/friends", userData, function(data){
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                    $("#results").modal("toggle");
 
-            })
+                    console.log(data.image);
+                });
+            }
+            else{
+                alert("Please fill out the entire form to find a match!")
+            }
 
-            $("#endSession").on('click', function(){
-                location.reload().scrollTop(0);  
-            })
+        })
 
-        </script>
+        $("#endSession").on('click', function(){
+            location.reload().scrollTop(0);  
+        })
+
+    </script>
+
     </body>
 </html>
