@@ -9,10 +9,10 @@ module.exports = function(app){
     })
     // posting user data to our db
     app.post('/api/friends', function(req, res){
-        // json format for generating best match for user
+
         var bestMatch = {
             name: "",
-            image: "",
+            photo: "",
             friendDifference: 1000
         }
 
@@ -29,8 +29,7 @@ module.exports = function(app){
             // looping through all friends scores
             for (var i = 0; i < friends[x].scores[i]; i++){
                 // taking absolute value of sum of user's answers minus the sum of friend's answer
-                totalDifference += Math.abs(parseInt(friends[x].scores[i]) - parseInt(userScores[i]))
-                console.log(parseInt(userScores[i]));
+                totalDifference += Math.abs(parseInt(userScores[i]) - parseInt(friends[x].scores[i]))
 
                 if(totalDifference <= bestMatch.friendDifference){
                     bestMatch.name = friends[i].name;
