@@ -11,7 +11,7 @@ var friends = [
     },
     {
         name: "Bernadette Rostenkowski",
-        photo: "https://vignette.wikia.nocookie.net/p__/images/9/95/Bernadette_Smiley_Face.jpeg/revision/latest?cb=20160313095524&path-prefix=protagonist",
+        photo: "https://i.pinimg.com/originals/b6/98/cb/b698cbe1af018133bbed25724ab0e7d5.jpg",
         scores: ["4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "4", "1", "1", "1", "1"]
     },
     {
