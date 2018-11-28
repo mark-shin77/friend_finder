@@ -339,6 +339,7 @@
             </div>
         </div>
 
+        <!-- Links at bottom of the page -->
         <footer class="footer">
             <div class="container text-right">
                 <p style="font-size: 20px"><a href="/api/friends">API Friends List</a>  |  <a href="https://github.com/mark-shin77/friend_finder">Github Repo</a></p>
@@ -356,10 +357,13 @@
             </button>
             </div>
             <div class="modal-body">
+                <!-- Name of Match, Generated Through JS -->
                 <h2 class="text-center" id="matchName"></h2>
+                <!-- Picture of Match, Generated Through JS -->
                 <img class="rounded mx-auto d-block" id="matchImg" src="http://www.gstatic.com/tv/thumb/tvbanners/15720821/p15720821_b_v8_ab.jpg" alt="" height="300px">
             </div>
             <div class="modal-footer">
+            <!-- Button to close the modal, Using JS to clear page when user closes the modal -->
             <button type="button" class="btn btn-secondary" id="endSession" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -368,21 +372,17 @@
 
     <!-- css -->
     <style>
+        /* Hiding Unwanted Space */
         .white-space{
             visibility: hidden;
         }
-
-        footer{
-            padding: 30px;
-        }
-        /* Survey Page Styling */
         .content-wrapper{
             background: rgba(130, 207, 255, 0.555);
-            /* background-image: linear-gradient(to top, lightskyblue, white); */
         }
         #survey{
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
         }
+        /* Select box styling */
         select {
             -webkit-appearance: menulist;
             -moz-appearance: menulist;
@@ -412,11 +412,18 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+        /* More Spacing around Footer */
+        footer{
+            padding: 30px;
+        }
+
     </style>
 
     <!-- Javascript -->
     <script>
+        // On click function for when user submits their data
         $('#submit').on('click', function(){
+            // making sure all information has been filled out
             function validateForm (){
                 var isValid = true;
                 $(".form-control").each(function(){
@@ -432,8 +439,9 @@
                 })
                 return isValid;
             }
-
+            
             if(validateForm()){
+                // generating user input into json data
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
@@ -456,24 +464,23 @@
                     ]
                 }
                 var currentURL = window.location.origin;
+                // posting user data into our db and generating a match with the closest data
                 $.post(currentURL +  "/api/friends", userData, function(data){
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
                     $("#results").modal("toggle");
-
                     console.log(data.image);
                 });
             }
+            // Prompting user to complete the entire form
             else{
                 alert("Please fill out the entire form to find a match!")
             }
-
         })
-
+        // Clearing page after user has found a match
         $("#endSession").on('click', function(){
             location.reload().scrollTop(0);  
         })
-
     </script>
 
     </body>
